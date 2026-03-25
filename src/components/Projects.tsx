@@ -1,28 +1,7 @@
 import { projects } from '../data/projects';
 import type { Project, ProjectLink } from '../data/projects';
 
-// ============================================================
-// TYPE ALIAS
-// ------------------------------------------------------------
-// Instead of repeating 'featured' | 'beginner' | 'webdesign'
-// everywhere, we create a TYPE ALIAS with the 'type' keyword.
-// It's like a variable, but for types.
-//
-// The difference between 'type' and 'interface':
-// - interface: best for describing object shapes
-// - type: best for unions, primitives, or aliases like this
-// ============================================================
-
 type Category = 'featured' | 'beginner' | 'webdesign';
-
-// ============================================================
-// SECTION CONFIG
-// ------------------------------------------------------------
-// We define the three sections as an array of objects.
-// Each object is typed inline using an anonymous object type.
-// This means we don't need a separate interface for something
-// this simple — TypeScript infers the shape from the data.
-// ============================================================
 
 const sections: { category: Category; title: string; subtitle: string }[] = [
   {
@@ -30,7 +9,7 @@ const sections: { category: Category; title: string; subtitle: string }[] = [
     title: '< Featured Projects />',
     subtitle: 'My most recent and complex work',
   },
-   {
+  {
     category: 'webdesign',
     title: '< Web Design />',
     subtitle: 'Client websites and design-focused work',
@@ -40,12 +19,7 @@ const sections: { category: Category; title: string; subtitle: string }[] = [
     title: '< Older Projects />',
     subtitle: 'Where it all started — earlier JavaScript projects',
   },
- 
 ];
-
-// ─────────────────────────────────────────────────────────────
-// CHILD: ProjectLinks
-// ─────────────────────────────────────────────────────────────
 
 interface ProjectLinksProps {
   links: ProjectLink[];
@@ -75,10 +49,6 @@ function ProjectLinks({ links }: ProjectLinksProps) {
     </div>
   );
 }
-
-// ─────────────────────────────────────────────────────────────
-// CHILD: ProjectCard
-// ─────────────────────────────────────────────────────────────
 
 interface ProjectCardProps {
   project: Project;
@@ -114,19 +84,6 @@ function ProjectCard({ project }: ProjectCardProps) {
   );
 }
 
-// ─────────────────────────────────────────────────────────────
-// CHILD: ProjectSection
-// ------------------------------------------------------------
-// This component receives a category, filters the projects
-// array down to just that category, and renders them.
-//
-// NEW CONCEPT: DERIVED DATA
-// We use .filter() to create a new array from 'projects'
-// that only contains items matching the category.
-// TypeScript knows the type of 'filtered' automatically
-// because it can infer it from the .filter() return type.
-// ─────────────────────────────────────────────────────────────
-
 interface ProjectSectionProps {
   category: Category;
   title: string;
@@ -134,10 +91,6 @@ interface ProjectSectionProps {
 }
 
 function ProjectSection({ category, title, subtitle }: ProjectSectionProps) {
-  // ----------------------------------------------------------
-  // TypeScript infers this as Project[] automatically —
-  // no need to annotate it manually.
-  // ----------------------------------------------------------
   const filtered = projects.filter((p) => p.category === category);
 
   return (
@@ -167,15 +120,6 @@ function ProjectSection({ category, title, subtitle }: ProjectSectionProps) {
     </div>
   );
 }
-
-// ─────────────────────────────────────────────────────────────
-// MAIN: Projects
-// ------------------------------------------------------------
-// Now the main component is super clean — it just loops over
-// the sections config and renders a ProjectSection for each.
-// Adding a new section in the future = one new object in the
-// 'sections' array above. That's it.
-// ─────────────────────────────────────────────────────────────
 
 export default function Projects() {
   return (
