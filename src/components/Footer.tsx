@@ -60,7 +60,10 @@ export default function Footer() {
   // ----------------------------------------------------------
   const contactItems = [
     { text: 'Velence, Hungary' },
-    { text: 'partos.petra.0305@gmail.com', href: 'mailto:partos.petra.0305@gmail.com' },
+    {
+      text: 'partos.petra.0305@gmail.com',
+      href: 'mailto:partos.petra.0305@gmail.com',
+    },
   ];
 
   return (
@@ -98,11 +101,7 @@ export default function Footer() {
             -------------------------------------------------- */}
           <div className="flex flex-col gap-3">
             {contactItems.map((item) => (
-              <ContactItem
-                key={item.text}
-                text={item.text}
-                href={item.href}
-              />
+              <ContactItem key={item.text} text={item.text} href={item.href} />
             ))}
           </div>
         </div>
