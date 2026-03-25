@@ -9,7 +9,6 @@ export default function AboutMe() {
           min-[1600px]:gap-[150px]
         "
       >
-
         <div
           className="
             flex flex-col justify-center items-center gap-10 p-[10%]
@@ -19,7 +18,6 @@ export default function AboutMe() {
             min-[1600px]:bg-[length:600px]  min-[1600px]:p-0
           "
         >
-
           <h2
             className="
               text-white text-[3rem] font-medium font-['Lexend_Deca',sans-serif] text-left w-full
@@ -41,7 +39,7 @@ export default function AboutMe() {
             2024. However, over the past years I've been diving into web
             development because I wanted to really grow my skills and build
             things that people enjoy using. I mainly focus on front-end
-            development, using React but I am also comfortabe working in the 
+            development, using React but I am also comfortabe working in the
             backend using Node.js, Express and SQL. I love creating websites and
             apps that are both functional and memorable. Everything you see in
             my projects was planned, designed, and built by me. My goal is to
