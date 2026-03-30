@@ -1,33 +1,12 @@
-// ============================================================
-// ANCHOR ELEMENT TYPING
-// ------------------------------------------------------------
-// We introduce one new concept here: typing event handlers
-// and HTML element props. You'll see this pattern constantly
-// in real React + TypeScript codebases.
-// ============================================================
 
-// ─────────────────────────────────────────────────────────────
-// CHILD: ContactItem
-// ------------------------------------------------------------
-// A small reusable component for each piece of contact info.
-// Notice the props can accept an optional 'href' — if it's
-// provided we wrap the content in an <a>, otherwise just <p>.
-// ─────────────────────────────────────────────────────────────
 
 interface ContactItemProps {
   text: string;
-  href?: string; // optional — not every contact item is a link
+  href?: string; 
 }
 
 function ContactItem({ text, href }: ContactItemProps) {
-  // ----------------------------------------------------------
-  // CONDITIONAL RENDERING WITH TERNARY
-  // If href exists → render a link
-  // If not → render a plain paragraph
-  //
-  // This is cleaner than two separate if/return blocks
-  // for something this simple.
-  // ----------------------------------------------------------
+
   return href ? (
     <a
       href={href}
@@ -40,24 +19,9 @@ function ContactItem({ text, href }: ContactItemProps) {
   );
 }
 
-// ─────────────────────────────────────────────────────────────
-// MAIN: Footer
-// ─────────────────────────────────────────────────────────────
 
 export default function Footer() {
-  // ----------------------------------------------------------
-  // TYPED CONSTANT ARRAYS
-  // ------------------------------------------------------------
-  // We define the contact details as a typed array right inside
-  // the component. The type is inferred automatically here —
-  // TypeScript sees 'text' is always a string and 'href' is
-  // sometimes a string, sometimes missing, so it types it as
-  // { text: string; href?: string }[] on its own.
-  //
-  // Keeping data close to where it's used is fine for small,
-  // static content like this. For bigger data, use a data file
-  // like we did with projects.
-  // ----------------------------------------------------------
+
   const contactItems = [
     { text: 'Velence, Hungary' },
     {
@@ -82,7 +46,7 @@ export default function Footer() {
           max-[950px]:grid-cols-1 max-[550px]:p-8
         "
       >
-        {/* ---- LEFT: contact info ---- */}
+        
         <div className="flex flex-col justify-center gap-6">
           <h2 className="text-white text-[2.5rem] font-medium font-['Lexend_Deca',sans-serif] max-[950px]:text-[1.8rem]">
             Contact me
@@ -93,12 +57,7 @@ export default function Footer() {
             or have any questions.
           </p>
 
-          {/* --------------------------------------------------
-            .map() over our contactItems array.
-            TypeScript knows exactly what shape each item is,
-            so you get autocomplete on 'item.text' and 'item.href'
-            inside this callback — try it in your editor!
-            -------------------------------------------------- */}
+          
           <div className="flex flex-col gap-3">
             {contactItems.map((item) => (
               <ContactItem key={item.text} text={item.text} href={item.href} />
@@ -106,7 +65,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ---- RIGHT: image ---- */}
+   
         <div className="flex justify-center items-center">
           <img
             src="/images/footer-image.png"

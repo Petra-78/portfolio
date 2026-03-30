@@ -3,10 +3,10 @@ export default function AboutMe() {
     <section className="flex w-full justify-center">
       <div
         className="
-          grid grid-cols-2 min-h-screen max-w-[1500px] px-10
+          grid grid-cols-2 min-h-screen max-w-[1400px] px-10
           max-[950px]:flex max-[950px]:flex-col
           max-[550px]:mt-[50px] max-[550px]:px-5 max-[550px]:gap-[50px]
-          min-[1600px]:gap-[150px]
+          min-[1600px]:gap-[150px] min-[1600px]:max-w-[1600px]
         "
       >
         <div
@@ -20,9 +20,9 @@ export default function AboutMe() {
         >
           <h2
             className="
-              text-white text-[3rem] font-medium font-['Lexend_Deca',sans-serif] text-left w-full
+              text-white text-[2.5rem] font-medium font-['Lexend_Deca',sans-serif] text-left w-full
               max-[950px]:text-[2rem]
-              min-[1600px]:text-[4rem]
+              min-[1600px]:text-[2.5rem]
             "
           >
             {'< About Me />'}
@@ -30,7 +30,7 @@ export default function AboutMe() {
 
           <p
             className="
-              text-white text-[1.3rem] text-justify bg-[#040d12a4]
+              text-white text-[1.2rem] text-justify bg-[#040d12a4]
               max-[950px]:text-[1rem]
               min-[1600px]:text-[1.5rem]
             "
