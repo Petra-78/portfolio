@@ -1,7 +1,7 @@
 # Petrawebdesign — Portfolio
 
 A personal portfolio website built with React, TypeScript, and Tailwind CSS, showcasing web development and web design projects.
-Live preview: https://petra-78.github.io/portfolio/
+Live preview: https://petrawebdesign-portfolio.netlify.app
 
 ---
 
@@ -54,4 +54,4 @@ This project is personal and not licensed for reuse. Feel free to use it as insp
 
 ---
 
-Made by [Petra](https://github.com/Petra-78) 🌿
+Made by [Petra](https://github.com/Petra-78) 
