@@ -6,7 +6,7 @@ export default function AboutMe() {
           grid grid-cols-2 min-h-screen max-w-[1400px] px-10
           max-[950px]:flex max-[950px]:flex-col
           max-[550px]:mt-[50px] max-[550px]:px-5 max-[550px]:gap-[50px]
-          min-[1600px]:gap-[150px] min-[1600px]:max-w-[1600px]
+          min-[1920px]:gap-[150px] min-[1920px]:max-w-[1700px]
         "
       >
         <div
@@ -15,14 +15,14 @@ export default function AboutMe() {
             bg-[url('/images/background-wavy-circle.png')] bg-left-bottom bg-no-repeat bg-[length:500px]
             max-[950px]:bg-[length:300px]
             max-[550px]:p-0
-            min-[1600px]:bg-[length:600px]  min-[1600px]:p-0
+            min-[1920px]:bg-[length:600px]  min-[1920px]:p-0
           "
         >
           <h2
             className="
               text-white text-[2.5rem] font-medium font-['Lexend_Deca',sans-serif] text-left w-full
               max-[950px]:text-[2rem]
-              min-[1600px]:text-[2.5rem]
+              min-[1920px]:text-[2.5rem]
             "
           >
             {'< About Me />'}
@@ -32,7 +32,7 @@ export default function AboutMe() {
             className="
               text-white text-[1.2rem] text-justify bg-[#040d12a4]
               max-[950px]:text-[1rem]
-              min-[1600px]:text-[1.5rem]
+              min-[1920px]:text-[1.5rem]
             "
           >
             Hi, my name is Petra. I started out as a freelance web designer in
@@ -55,13 +55,13 @@ export default function AboutMe() {
             bg-[url('/images/background-wavy-circle.png')] bg-[center_top_20%] bg-no-repeat bg-[length:50%]
             max-[950px]:w-full max-[950px]:bg-[length:350px]
             max-[550px]:bg-contain
-            min-[1600px]:bg-[length:600px]  
+            min-[1920px]:bg-[length:600px]  
           "
         >
           <img
             src="/images/about-me.png"
             alt="Petra, web designer and developer"
-            className="w-full max-w-[500px] object-contain min-[1600px]:max-w-[700px]"
+            className="w-full max-w-[500px] object-contain min-[1920px]:max-w-[700px]"
           />
         </div>
       </div>
