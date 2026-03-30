@@ -6,7 +6,7 @@ export default function AboutMe() {
           grid grid-cols-2 min-h-screen max-w-[1400px] px-10
           max-[950px]:flex max-[950px]:flex-col
           max-[550px]:mt-[50px] max-[550px]:px-5 max-[550px]:gap-[50px]
-          min-[1920px]:gap-[150px] min-[1920px]:max-w-[1700px]
+          min-[1920px]:gap-[150px] min-[1920px]:max-w-[70vw]
         "
       >
         <div
